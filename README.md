@@ -12,7 +12,7 @@ Jag bygger upp dessa över kataloger över kurser.
 	- Arbetsmetodik och Agila projektmetoder (Arbetsmetodik)
 	- Avancerad webbutveckling - JavaScript Backend (Avancerad Webbutv Javascript Backend)
 	- Interaktionsdesign och användbarhet (Interaktionsdesign)
-	- Systemutveckling (Systemutv)
+	- Systemutveckling
 	- Systemarkitektur
 	- Backendutveckling och Systemintegration (Backend och Systemintegration)
 	- Examensarbete
