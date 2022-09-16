@@ -14,5 +14,5 @@ Jag bygger upp dessa över kataloger över kurser.
 	- Interaktionsdesign och användbarhet (Interaktionsdesign)
 	- Systemutveckling (Systemutv)
 	- Systemarkitektur
-	- Backendutveckling och Systemintegration (Backend och Systemint.)
+	- Backendutveckling och Systemintegration (Backend och Systemintegration)
 	- Examensarbete
