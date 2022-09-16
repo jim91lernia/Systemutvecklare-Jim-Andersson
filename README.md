@@ -17,4 +17,3 @@ Jag bygger upp dessa över kataloger över kurser.
 	- Backendutveckling och Systemintegration (Backend och Systemint.)
 	- Examensarbete
 
-ww
