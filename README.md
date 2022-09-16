@@ -16,4 +16,4 @@ Jag bygger upp dessa över kataloger över kurser.
 	- Systemarkitektur
 	- Backendutveckling och Systemintegration (Backend och Systemint.)
 	- Examensarbete
-	-Test
+
