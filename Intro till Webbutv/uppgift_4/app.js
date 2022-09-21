@@ -24,41 +24,16 @@ function addChild(title, desc) {
     let ul = document.querySelector("#list")
     let li = document.createElement("li")
     li.innerHTML = `
-    <article class="media">
-    <div class="media-left">
-      <figure class="image is-64x64">
-        <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
-      </figure>
+    <article class="message is-info">
+    <div class="message-header">
+      <p>${title}</p>
+      <button class="delete" aria-label="delete"></button>
     </div>
-    <div class="media-content">
-      <div class="content">
-        <p>
-          <strong>${title}</strong>
-          <br>
-          ${desc}
-        </p>
-      </div>
-      <nav class="level is-mobile">
-        <div class="level-left">
-          <a class="level-item" aria-label="reply">
-            <span class="icon is-small">
-              <i class="fas fa-reply" aria-hidden="true"></i>
-            </span>
-          </a>
-          <a class="level-item" aria-label="retweet">
-            <span class="icon is-small">
-              <i class="fas fa-retweet" aria-hidden="true"></i>
-            </span>
-          </a>
-          <a class="level-item" aria-label="like">
-            <span class="icon is-small">
-              <i class="fas fa-heart" aria-hidden="true"></i>
-            </span>
-          </a>
-        </div>
-      </nav>
+    <div class="message-body">
+      ${desc}
     </div>
   </article>
+  <br>
     `
     ul.appendChild(li);
 }
