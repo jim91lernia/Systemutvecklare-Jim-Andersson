@@ -4,9 +4,10 @@
 
 /* Jag använder en windows och linux-vänlig sans-serif font familj. Då jag främst använder detta, Windows 10, Arch-linux */
 body {
-    font: 13px Helmet, Fressans, sans-seif;
-    width: 100%;
-    height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    font-weight: 300;
+
 }
 
 body,
@@ -89,40 +90,21 @@ hr {
 
 }
 
-body {
-    background: linear-gradient(-45deg, hsl(14, 82%, 63%), #e73c7e, #82d523, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-}
-
 .container {
-    margin: auto;
-    padding: 0;
-    height: auto;
-    min-height: 100px;
-    max-width: 900px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-    border-top-left-radius: 0.5em 1em;
-    border-top-right-radius: 0.5em 1em;
-    border-bottom-left-radius: 0.5em 1em;
-    border-bottom-right-radius: 0.5em 1em;
-    background-color: #ffffff;
+    background: #50a3a2;
+    background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+    background: -moz-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+    background: -o-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+    background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
 
-}
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    margin-top: -200px;
+    overflow: hidden;
 
-.container .display {
-    margin-left: 5%;
-    border-top-left-radius: 0 0;
-    border-bottom-left-radius: 0 0;
-}
-
-.container .svg-icon {
-    width: 50px;
-    float: left;
-    display: block;
-    position: relative;
-    top: 40px;
-    left: 2%;
 }
 
 
@@ -131,7 +113,6 @@ body {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
     padding-top: 20px;
     padding-bottom: 0px;
-    height: 10px;
 }
 
 .item {
@@ -227,7 +208,6 @@ p {
     text-align: left;
 }
 
-
 .experience {
 
     border-top-left-radius: 0.5em 1em;
@@ -265,3 +245,11 @@ p {
 .large-text {
     font-size: 20px;
 }
+
+
+
+
+/* Försök till Responsive Design 
+-------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 480px) {}
