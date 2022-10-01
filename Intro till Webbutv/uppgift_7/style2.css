@@ -4,10 +4,9 @@
 
 /* Jag använder en windows och linux-vänlig sans-serif font familj. Då jag främst använder detta, Windows 10, Arch-linux */
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    color: white;
-    font-weight: 300;
-
+    font: 13px Helmet, Fressans, sans-seif;
+    width: 100%;
+    height: 100%;
 }
 
 body,
@@ -36,6 +35,7 @@ a {
 
 a:hover {
     color: #69f;
+    text-decoration: none;
 }
 
 ::-moz-selection {
@@ -52,6 +52,7 @@ a:hover {
 
 a:link {
     -webkit-tap-highlight-color: #fcd700;
+    text-decoration: none
 }
 
 ins {
@@ -83,156 +84,109 @@ blockquote {
 }
 
 
+
+
+
 /* Här fixar jag mina egna stilar */
 
-hr {
-    max-width: 15%;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, #FDFCFB, #E2D1C3);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    position: relative;
+    text-align: left;
+    line-height: 1.4;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+header {
+    position: fixed;
+    display: block;
+    top: 0%;
+    width: 100%;
+    height: auto;
+    background-color: #282A35;
+    color: #f1f1f1;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+
+}
+
+
+.nav-menu {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.nav-menu a {
+    color: #f1f1f1;
+    font-size: 1.2em;
+    font-weight: 500;
+    display: inline;
+    width: 80px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    margin: 20px;
+}
+
+.nav-menu a:hover {
+    color: yellow;
+    font-size: 1.3em;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+
+footer {
+    position: fixed;
+    width: 100%;
+    height: 20px;
+    background: #f4f4f4;
+    box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 3px 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    bottom: 0%;
 
 }
 
 .container {
-    background: #50a3a2;
-    background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-    background: -moz-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-    background: -o-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-    background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
 
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 400px;
-    margin-top: -200px;
-    overflow: hidden;
-
-}
-
-
-.header-nav {
-    background: #f4f4f4;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-    padding-top: 20px;
-    padding-bottom: 0px;
-}
-
-.item {
-    margin-top: 10px;
-    margin-left: 10%;
-}
-
-.about {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: block;
-    text-align: left;
-
-}
-
-.about h1,
-h3,
-p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 0;
-
-}
-
-.about .profile-img {
-    margin-left: 10%;
-    margin-bottom: 10px;
-    display: inline;
-
-}
-
-.about .profile-img img {
-    display: inline-block;
-    border-radius: 50%;
-    max-width: 10%;
-    width: 100px;
-    border-style: solid;
-    border-color: #000;
-    opacity: 0.5;
-
-}
-
-
-.profile-img p {
-    margin-left: 10%;
-}
-
-
-.about .profile-img img:hover {
-    border-radius: 50%;
-    max-width: 15%;
-    border-style: solid;
-    border-color: #000;
-    opacity: 1;
-
-}
-
-.about .profile-text {
-    position: relative;
-    top: 10px;
-    left: 5%;
-    display: inline-block;
-    text-align: left;
-    vertical-align: top;
-}
-
-
-.competence {
-
-    border-top-left-radius: 0.5em 1em;
-    border-top-right-radius: 0.5em 1em;
     border-bottom-left-radius: 0.5em 1em;
     border-bottom-right-radius: 0.5em 1em;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    margin-left: 15%;
-    opacity: 0.5;
+    background-color: #f1f1f1;
+    box-shadow: rgba(0, 0, 0, 0.25) 8px 2px 3px 3px;
+
+    box-sizing: border-box;
+
+    bottom: 30px;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+#author {
+    font-style: italic;
+    font-size: 14px;
 
 }
 
-.competence:hover {
-    opacity: 1;
+
+
+footer p {
+    text-align: center;
 }
-
-
-
-.competence h2,
-p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: left;
-}
-
-.experience {
-
-    border-top-left-radius: 0.5em 1em;
-    border-top-right-radius: 0.5em 1em;
-    border-bottom-left-radius: 0.5em 1em;
-    border-bottom-right-radius: 0.5em 1em;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    margin-left: 15%;
-    opacity: 0.5;
-}
-
-.experience:hover {
-    opacity: 1;
-}
-
-
-.experience h2,
-p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: left;
-}
-
 
 .small-text {
     font-size: 14px;
@@ -247,9 +201,79 @@ p {
 }
 
 
+.svg-icon {
+    width: 50px;
+    float: left;
+    display: inline;
+    top: 40px;
+    left: 2%;
+}
 
 
-/* Försök till Responsive Design 
--------------------------------------------------------------------------------*/
+.about {
 
-@media screen and (max-width: 480px) {}
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+
+}
+
+
+.profile-img img {
+
+    display: inline-block;
+    border-radius: 50%;
+    max-width: 10%;
+    width: 100px;
+    border-style: solid;
+    border-color: #000;
+    opacity: 0.5;
+
+}
+
+.profile-img img:hover {
+    border-radius: 50%;
+    max-width: 15%;
+    border-style: solid;
+    border-color: #000;
+    opacity: 1;
+
+}
+
+
+.competence {
+    border-top-left-radius: 0.5em 1em;
+    border-top-right-radius: 0.5em 1em;
+    border-bottom-left-radius: 0.5em 1em;
+    border-bottom-right-radius: 0.5em 1em;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-left: 15%;
+    opacity: 1;
+}
+
+.competence:hover {
+    opacity: 1;
+}
+
+
+.experience {
+    border-top-left-radius: 0.5em 1em;
+    border-top-right-radius: 0.5em 1em;
+    border-bottom-left-radius: 0.5em 1em;
+    border-bottom-right-radius: 0.5em 1em;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-left: 15%;
+    opacity: 1;
+}
+
+.experience:hover {
+    opacity: 1;
+}
