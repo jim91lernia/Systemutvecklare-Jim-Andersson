@@ -6,68 +6,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Jim Andersson</title>
-    <link rel="stylesheet" href="./style2.css">
+    <link rel="stylesheet" href="./style flex.css">
 </head>
 
 <body>
 
     <header>
-
-
         <div>
             <nav class="nav-menu">
-                <div class="profile-img">
-                    <img src="./src/profile.jpg" alt="">
-                </div>
-                <a href="#">Om mig</a>
+                <a href="">Om mig</a>
                 <a href="#">Projekt</a>
             </nav>
         </div>
     </header>
 
-    <div class="container">
-        <section class="about">
+    <main>
 
-            <p class="medium-text">Detta är jag....</p>
-            <p class="medium-text">Nyfiken programmerare, med stora ambitioner</p>
-            <p id="author"> -- "Jim Andersson"</p>
 
-        </section>
-        <br>
-        <img class="svg-icon" src="./src/knowledge.svg" alt="">
-        <section class="competence">
 
-            <p class="large-text">Kompetenser</p>
-            <div>
-                <ul>
-                    <li>
+        <div class="row">
+            <div class="column grouped">
+                <div class="row">
+                    <img src="./src/nerd.png" width="125px" alt="">
+                </div>
+                <div class="row">
+                    <p class="medium-text row-item-center">Detta är jag....</p>
+                    <p>Nyfiken programmerare, med stora ambitioner</p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="column">
+
+            </div>
+            <div class="column grouped">
+                <div class="column">
+                    <div class="row"> <img class="svg-icon row-item-center" src="./src/painting.svg" alt=""></div>
+                    <div class="row">
+                        <p class="large-text row-item-center">Kompetenser</p>
+                    </div>
+                    <div class="row">
                         <p><strong>Webbprogrammering</strong> (JS, Node.js, HTML5, CSS3)</p>
-                    </li>
-                    <li>
-                        <p> <strong>Lågnivåprogrammering mot MCU</strong> (C/C++)</p>
-                    </li>
-                    <li>
+                        <p><strong>Lågnivåprogrammering mot MCU</strong> (C/C++)</p>
                         <p><strong>Drivrutinutveckling Linux</strong> (C/C++)</p>
-                    </li>
-                </ul>
+                        <p><strong>Databashantering</strong> (Mongodb)</p>
+                    </div>
+                    <br>
+                </div>
 
             </div>
-
-        </section>
-        <br>
-        <img class="svg-icon" src="./src/job.svg" alt="">
-        <section class="experience">
-
-            <p class="large-text">Arbetslivserfarenheter</p>
-            <div>
-                <ul>
-                    <li>
-                        <p><strong>Programmerare</strong> - Granitor Electro AB, Fastighetsautomation</p>
-                    </li>
-                </ul>
+            <div class="column"><img src="./src/know.png" width="250px" alt=""></div>
+            <div class="column grouped">
+                <div class="row"> <img class="svg-icon row-item-center" src="./src/science.svg" alt="">
+                </div>
+                <div class="row">
+                    <p class="large-text row-item-center">Experiment</p>
+                </div>
+                <div class="row">
+                    <p>Jag söker alltid nya sätt att lösa problem på. Jag vill hitta simpla lösningar på komplexa
+                        problem.</p>
+                </div>
             </div>
-        </section>
-    </div>
+            <div class="column"></div>
+
+        </div>
+        <div class="row">
+            <div class="column">
+            </div>
+            <div class="column grouped">
+                <div class="row"> <img class="svg-icon row-item-center" src="./src/knowledge.svg" alt=""></div>
+                <div class="row">
+                    <p class="large-text row-item-center">Utbildning</p>
+                </div>
+                <div class="row">
+                    <p>2022 - Pågående</p>
+                    <p><strong>Systemutvecklare </strong> Lernia Yrkeshögskola</p>
+                </div>
+                <div class="row">
+                    <p>2010 - 2014</p>
+                    <p><strong>Design av Digitala Medier</strong> Högskolan Dalarna</p>
+                </div>
+            </div>
+            <div class="column">
+                <img src="./src/work.png" width="300px" alt="">
+            </div>
+            <div class="column grouped">
+
+                <div class="row"> <img class="svg-icon row-item-center" src="./src/briefcase.svg" alt=""></div>
+                <div class="row">
+                    <p class="large-text row-item-center">Arbetslivserfarenhet</p>
+                </div>
+                <div class="row">
+                    <p>2018 - Pågående</p>
+                    <p><strong>Programmerare / Systemintegratör </strong> Granitor Electro Fastighetsautomation</p>
+
+                </div>
+
+
+
+            </div>
+            <div class="column"></div>
+            <div class="column grouped"></div>
+
+        </div>
+
+
+    </main>
+
+
+
 
     <footer>
         <p> Copyright &copy; 2022 Jim Andersson</p>
