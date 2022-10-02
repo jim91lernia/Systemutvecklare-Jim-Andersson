@@ -6,109 +6,118 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Jim Andersson</title>
+    <!-- Använder fonts via google font API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap"
+        rel="stylesheet">
+
+    <!-- Min egna CSS -->
     <link rel="stylesheet" href="./style.css">
+
 </head>
 
 <body>
 
     <header>
-        <div>
-            <nav class="nav-menu">
-                <a href="">Om mig</a>
-                <a href="#">Projekt</a>
-            </nav>
+        <div class="row about-me">
+            <div class="column column-50">
+                <p><span class="large-text"> Jim Andersson | </span>
+                </p>
+            </div>
+            <div class="column column-50">
+                <nav class="nav-menu">
+                    <a href="#" class="color-accent">Om mig</a>
+                    <a href="#" class="color-accent">Projekt</a>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <main>
+    <main class="container">
+
+        <div class="row ">
+            <div class="column column-100">
+                <div class="row education">
+                    <img src="./src/school.svg" width="50px" alt="">
+                </div>
+                <div class="row education">
+                    <p><span class="large-text color-accent">Utbildning</span>
+                </div>
+                <div class="row education">
+                    <ul>
+                        <li>
+                            <p><span class="medium-text">Systemutvecklare Java och Javascript | </span> <span
+                                    class="small-text">Lernia </span> <span class="medium-text"> | </span>
+                                <span class="color-main">2022 - Pågående </span></p>
+                        </li>
+                        <li>
+                            <p><span class="medium-text"> Design av Digitala Medier | </span> <span
+                                    class="small-text">Högskolan Dalarna </span> <span class="medium-text">
+                                    | </span> <span class="color-main">2010 - 2014 </span></p>
+                        </li>
+                    </ul>
+                </div>
 
 
-
+            </div>
+        </div>
         <div class="row">
-            <div class="column grouped">
+            <div class="column column-50">
+                <div class="row"> <img class="svg-icon" src="./src/manufacture.svg" alt=""></div>
                 <div class="row">
-                    <img src="./src/nerd.png" width="125px" alt="">
+                    <p class="large-text color-accent">Arbetslivserfarenhet</p>
                 </div>
-                <div class="row">
-                    <p class="medium-text row-item-center">Detta är jag....</p>
-                    <p>Nyfiken programmerare, med stora ambitioner</p>
-                    <p></p>
-                </div>
-            </div>
-            <div class="column">
+                <div class="row small-text">
+                    <ul>
+                        <li>
+                            <p><span class="medium-text"> Programmerare / Systemintegratör | </span> <span
+                                    class="small-text">Granitor Electro Fastighetsautomation </span> <span
+                                    class="medium-text"></span>
+                                | </span> <span class="color-main">2018 - Pågående </span></p>
 
+                        </li>
+                    </ul>
+
+                </div>
             </div>
-            <div class="column grouped">
+            <div class="column column-25"></div>
+            <div class="column column-25">
+                <img src="./src/work.png" width="300px" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column column-50">
+            </div>
+            <div class="column column-50">
                 <div class="column">
-                    <div class="row"> <img class="svg-icon row-item-center" src="./src/painting.svg" alt=""></div>
+                    <div class="row"> <img class="svg-icon" src="./src/competence.svg" alt=""></div>
                     <div class="row">
-                        <p class="large-text row-item-center">Kompetenser</p>
+                        <p class="large-text color-accent">Kompetenser</p>
                     </div>
                     <div class="row">
-                        <p><strong>Webbprogrammering</strong> (JS, Node.js, HTML5, CSS3)</p>
-                        <p><strong>Lågnivåprogrammering mot MCU</strong> (C/C++)</p>
-                        <p><strong>Drivrutinutveckling Linux</strong> (C/C++)</p>
-                        <p><strong>Databashantering</strong> (Mongodb)</p>
+                        <ul>
+                            <li>
+                                <p><span class="medium-text">Webbprogrammering | </span> <span
+                                        class="small-text color-fourth">
+                                        Javascript, Node.js, HTML5, CSS3 </span></p>
+                            </li>
+                            <li>
+                                <p><span class="medium-text">Lågnivåprogrammering mot Microcontroller | </span> <span
+                                        class="small-text color-fourth"> C/C++</span></p>
+                            </li>
+                            <li>
+                                <p><span class="medium-text">Databashantering | </span> <span
+                                        class="small-text color-fourth"> MySQL,
+                                        Mongodb</span></p>
+                            </li>
+                        </ul>
                     </div>
                     <br>
                 </div>
-
             </div>
-            <div class="column"><img src="./src/know.png" width="250px" alt=""></div>
-            <div class="column grouped">
-                <div class="row"> <img class="svg-icon row-item-center" src="./src/science.svg" alt="">
-                </div>
-                <div class="row">
-                    <p class="large-text row-item-center">Experiment</p>
-                </div>
-                <div class="row">
-                    <p>Jag söker alltid nya sätt att lösa problem på. Jag vill hitta simpla lösningar på komplexa
-                        problem.</p>
-                </div>
-            </div>
-            <div class="column"></div>
-
         </div>
-        <div class="row">
-            <div class="column">
-            </div>
-            <div class="column grouped">
-                <div class="row"> <img class="svg-icon row-item-center" src="./src/knowledge.svg" alt=""></div>
-                <div class="row">
-                    <p class="large-text row-item-center">Utbildning</p>
-                </div>
-                <div class="row">
-                    <p>2022 - Pågående</p>
-                    <p><strong>Systemutvecklare </strong> Lernia Yrkeshögskola</p>
-                </div>
-                <div class="row">
-                    <p>2010 - 2014</p>
-                    <p><strong>Design av Digitala Medier</strong> Högskolan Dalarna</p>
-                </div>
-            </div>
-            <div class="column">
-                <img src="./src/work.png" width="300px" alt="">
-            </div>
-            <div class="column grouped">
-
-                <div class="row"> <img class="svg-icon row-item-center" src="./src/briefcase.svg" alt=""></div>
-                <div class="row">
-                    <p class="large-text row-item-center">Arbetslivserfarenhet</p>
-                </div>
-                <div class="row">
-                    <p>2018 - Pågående</p>
-                    <p><strong>Programmerare / Systemintegratör </strong> Granitor Electro Fastighetsautomation</p>
-
-                </div>
-
-
-
-            </div>
-            <div class="column"></div>
-            <div class="column grouped"></div>
-
-        </div>
-
 
     </main>
 
