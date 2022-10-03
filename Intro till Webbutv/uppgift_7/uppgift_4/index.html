@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uppgift 4 - ToDo Lista</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+
+</head>
+
+<body id="test">
+    <div class="container">
+        <section class="section">
+            <h1 class="title">ToDo </h1>
+            <h2 class="subtitle">
+                En applikation som hjälper dig att komma ihåg ;)
+            </h2>
+        </section>
+
+        <section class="section">
+            <div class="columns is-mobile">
+                <div class="column">
+                    <div class="box">
+                        <h1 class="title is-3">Komma ihåg</h1>
+                        <div class="field">
+                            <label class="label">Ny punkt att komma ihåg</label>
+                            <div class="control">
+                                <label for="title"><strong>Vad?</strong></label>
+                                <input class="input" type="text" placeholder="Titel på ny punkt" name="title"
+                                    id="titleToDo">
+                                <label for="desc"> <strong>Beskrivning</strong> </label>
+                                <textarea class="textarea" placeholder="Något som du behöver genomföra" id="txtToDo"
+                                    name="desc"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button class="button is-link is-small" id="buttonNewToDo">Lägg till</button>
+                            <button class="button is-danger is-small" id="buttonClearAll">Rensa alla</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="column">
+
+
+                    <div class="box">
+                        <h1 class="title is-3">Min lista</h1>
+                        <h5 class="subtitle is-6">Antal avklarade punkter: <span id="finished"></span></h5>
+                        <h5 class="subtitle is-6">Antal punkter kvar: <span id="remaining"></span></h5>
+                        <h5 class="subtitle is-6">Totalt antal punkter i listan: <span id="total"></span></h5>
+                        <ul id="list"></ul>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+        </section>
+    </div>
+
+
+    <script type="text/javascript" src="app.js"></script>
+
+</body>
+
+</html>
