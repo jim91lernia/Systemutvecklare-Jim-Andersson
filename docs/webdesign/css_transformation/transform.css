@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+.container {
+    width: 960px;
+    height: auto;
+    margin: 200px auto;
+}
+
+div {}
+
+
+.circle {
+    height: 50px;
+    width: 50px;
+    background-color: rgba(192, 0, 0, 0.8);
+    border-radius: 50%;
+    transform: translate(0px, 0px);
+    transition: transform 0.5s, border-radius 0.5s;
+    ;
+}
+
+.circle:hover {
+    border-radius: 30%;
+    transform: translate(200px, 100px) scale(4);
+    transition: transform 2s, border-radius 1s
+}
+
+.blue {
+    background-color: rgba(0, 0, 190, 0.5);
+}
