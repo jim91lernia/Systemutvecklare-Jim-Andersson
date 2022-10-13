@@ -21,13 +21,48 @@ div {}
     border-radius: 50%;
     transform: translate(0px, 0px);
     transition: transform 0.5s, border-radius 0.5s;
-    ;
+
+
 }
 
-.circle:hover {
-    border-radius: 30%;
-    transform: translate(200px, 100px) scale(4);
-    transition: transform 2s, border-radius 1s
+.anim {
+    animation: red-blue-green 10s infinite;
+}
+
+@keyframes red-blue-green {
+    0% {
+        border-radius: 50%;
+        background-color: rgba(192, 0, 0, 0.8);
+        transform: translate(0px, 0px);
+    }
+
+    25% {
+        border-radius: 50%;
+        background-color: rgba(0, 0, 192, 0.8);
+        transform: translate(200px, 0px);
+
+    }
+
+    50% {
+        border-radius: 50%;
+        background-color: rgba(192, 0, 192, 0.8);
+        transform: translate(200px, 200px);
+
+    }
+
+    75% {
+        border-radius: 50%;
+        background-color: rgba(0, 192, 0, 0.8);
+        transform: translate(0px, 200px);
+
+    }
+
+    100% {
+        border-radius: 50%;
+        background-color: rgba(192, 0, 0, 0.8);
+        transform: translate(0px, 0px);
+
+    }
 }
 
 .blue {

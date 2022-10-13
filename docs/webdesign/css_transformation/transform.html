@@ -12,15 +12,22 @@
 <body>
     <div class="container">
         <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
 </body>
 
 <script>
-    const circle = document.querySelector(".circle")
-    circle.addEventListener("click", () => {
-        circle.classList.toggle("blue")
-    })
+    const circles = document.getElementsByClassName("circle ")
+
+
+    for (let i = 0; i < circles.length; i++) {
+        circles[i].addEventListener("click", () => {
+            let circle = circles[i]
+            circle.classList.toggle("anim")
+        })
+    }
 </script>
-</div>
 
 
 </html>
