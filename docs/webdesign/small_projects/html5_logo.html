@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Logo med Canvas</title>
+    <style>
+        .container {
+            width: 100%;
+            height: auto;
+            margin: 50px 50px auto;
+            display: flex;
+            flex-direction: row;
+            gap: 40px
+        }
+
+        .html5 {
+            transform: translate(0, 0);
+            transition: 0.5s ease;
+        }
+
+        .html5:hover {
+            transform: translate(0, 20%);
+            transition: 0.7s ease;
+        }
+
+        .css3 {
+            transform: translate(0, 0);
+            transition: 0.5s ease;
+        }
+
+        .css3:hover {
+            transform: translate(0, 20%);
+            transition: 0.7s ease;
+
+        }
+
+        .js {
+            transform: translate(0, 0);
+            transition: 0.5s ease;
+        }
+
+        .js:hover {
+            transform: translate(0, 20%);
+            transition: 0.7s ease;
+
+        }
+    </style>
+</head>
+
+<body onLoad="init()">
+    <div class="container">
+        <canvas class="html5 "></canvas>
+        <canvas class="css3"></canvas>
+        <!--<canvas class=" js"></canvas>-->
+
+    </div>
+
+
+
+
+    <script>
+        function init() {
+            html5Logo()
+            css3Logo()
+            // jsLogo()
+        }
+
+        function html5Logo() {
+            let ctx = document.querySelector(".html5").getContext("2d");
+            ctx.canvas.height = ctx.canvas.width * 0.666;
+
+            currHeight = ctx.canvas.height;
+            currWidth = ctx.canvas.width;
+            currX = ctx.canvas.getBoundingClientRect().x
+            currY = ctx.canvas.getBoundingClientRect().y
+            console.log(currX)
+            console.log(currY)
+
+            ctx.restore(); // Hämtar tillbaka senaste "Default state" av canvas-elementet
+            ctx.save(); // Sparar "Default State"
+            ctx.clearRect(currX, currY, currWidth, currHeight);
+            ctx.translate(0, currHeight * 0.2);
+
+            // Orange Bakgrund
+            ctx.fillStyle = "#E34c26";
+            ctx.beginPath();
+            ctx.moveTo(currWidth * 0.065, currHeight * 0.625);
+            ctx.lineTo(currWidth * 0.028, 0);
+            ctx.lineTo(currWidth * 0.43, 0);
+            ctx.lineTo(currWidth * 0.398, currHeight * 0.625);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.695);
+            ctx.closePath();
+            ctx.fill();
+
+            // Högersidan av Bakgrund, ljusare orange
+            ctx.fillStyle = "#F06529";
+            ctx.beginPath();
+            ctx.moveTo(currWidth * 0.231, currHeight * 0.6425);
+            ctx.lineTo(currWidth * 0.366, currHeight * 0.585);
+            ctx.lineTo(currWidth * 0.398, currHeight * 0.05);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.05);
+            ctx.closePath();
+            ctx.fill();
+
+            // Vänstersidan av 5, Övre del
+            ctx.fillStyle = "#EBEBEB";
+            ctx.beginPath();
+            ctx.moveTo(currWidth * 0.231, currHeight * 0.2825);
+            ctx.lineTo(currWidth * 0.163, currHeight * 0.2825);
+            ctx.lineTo(currWidth * 0.16, currHeight * 0.205);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.205);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.1275);
+            ctx.lineTo(currWidth * 0.103, currHeight * 0.1275);
+            ctx.lineTo(currWidth * 0.116, currHeight * 0.36);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.36);
+            ctx.closePath();
+            ctx.fill();
+
+
+            // Vänstersidan av 5, Nedre del
+            ctx.beginPath();
+            ctx.moveTo(currWidth * 0.231, currHeight * 0.4825);
+            ctx.lineTo(currWidth * 0.175, currHeight * 0.46);
+            ctx.lineTo(currWidth * 0.171, currHeight * 0.3975);
+            ctx.lineTo(currWidth * 0.12, currHeight * 0.3975);
+            ctx.lineTo(currWidth * 0.126, currHeight * 0.52);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.5625);
+            ctx.closePath();
+            ctx.fill();
+
+            // Högersidan av 5, Nedre del
+            ctx.fillStyle = "#FFFFFF";
+            ctx.beginPath();
+            ctx.moveTo(currWidth * 0.231, currHeight * 0.2825);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.36);
+            ctx.lineTo(currWidth * 0.295, currHeight * 0.36);
+            ctx.lineTo(currWidth * 0.288, currHeight * 0.46);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.4825);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.5625);
+            ctx.lineTo(currWidth * 0.336, currHeight * 0.5175);
+            ctx.lineTo(currWidth * 0.35, currHeight * 0.2825);
+            ctx.closePath();
+            ctx.fill();
+
+            // Högersidan av 5, Övre del
+            ctx.fillStyle = "#FFFFFF";
+            ctx.beginPath();
+            ctx.moveTo(currWidth * 0.231, currHeight * 0.1275);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.205);
+            ctx.lineTo(currWidth * 0.355, currHeight * 0.205);
+            ctx.lineTo(currWidth * 0.36, currHeight * 0.1275);
+            ctx.closePath();
+            ctx.fill();
+
+        }
+
+        function css3Logo() {
+            let ctx = document.querySelector(".css3").getContext("2d");
+            ctx.canvas.height = ctx.canvas.width * 0.666;
+            currHeight = ctx.canvas.height;
+            currWidth = ctx.canvas.width;
+            currX = ctx.canvas.getBoundingClientRect().x
+            currY = ctx.canvas.getBoundingClientRect().y
+            console.log(currWidth)
+            console.log(currHeight)
+
+            ctx.restore(); // Hämtar tillbaka senaste "Default state" av canvas-elementet
+            ctx.save(); // Sparar "Default State"
+            ctx.clearRect(currX, currY, currWidth, currHeight);
+            ctx.translate(0, currHeight * 0.2);
+
+            // Blå Bakgrund
+            ctx.fillStyle = "#0277BD";
+            ctx.beginPath();
+            ctx.moveTo(currWidth * 0.065, currHeight * 0.625);
+            ctx.lineTo(currWidth * 0.028, 0);
+            ctx.lineTo(currWidth * 0.43, 0);
+            ctx.lineTo(currWidth * 0.398, currHeight * 0.625);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.695);
+            ctx.closePath();
+            ctx.fill();
+
+            // Högersidan av Bakgrund, ljusare blå
+            ctx.fillStyle = "#039BE5";
+            ctx.beginPath();
+            ctx.moveTo(currWidth * 0.231, currHeight * 0.6425);
+            ctx.lineTo(currWidth * 0.366, currHeight * 0.585);
+            ctx.lineTo(currWidth * 0.398, currHeight * 0.05);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.05);
+            ctx.closePath();
+            ctx.fill();
+
+            // Vänstersidan av 3, Övre del
+            ctx.fillStyle = "#EBEBEB";
+            ctx.beginPath();
+            ctx.moveTo(currWidth * 0.231, currHeight * 0.205);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.205);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.1275);
+            ctx.lineTo(currWidth * 0.10, currHeight * 0.1275);
+            ctx.lineTo(currWidth * 0.10, currHeight * 0.205);
+            ctx.closePath();
+            ctx.fill();
+
+            // Vänstersidan av 3, Mitten del
+            ctx.beginPath();
+            ctx.moveTo(currWidth * 0.231, currHeight * 0.36);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.36);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.28);
+            ctx.lineTo(currWidth * 0.19, currHeight * 0.298);
+            ctx.lineTo(currWidth * 0.19, currHeight * 0.36);
+            ctx.closePath();
+            ctx.fill();
+
+            // Vänstersidan av 3, Nedre del
+            ctx.beginPath();
+            ctx.moveTo(currWidth * 0.231, currHeight * 0.4825);
+            ctx.lineTo(currWidth * 0.175, currHeight * 0.46);
+            ctx.lineTo(currWidth * 0.171, currHeight * 0.3975);
+            ctx.lineTo(currWidth * 0.12, currHeight * 0.3975);
+            ctx.lineTo(currWidth * 0.126, currHeight * 0.52);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.5625);
+            ctx.closePath();
+            ctx.fill();
+
+            // Högersidan av 3, Nedre del
+            ctx.fillStyle = "#FFFFFF";
+            ctx.beginPath();
+            ctx.moveTo(currWidth * 0.231, currHeight * 0.2825);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.36);
+            ctx.lineTo(currWidth * 0.295, currHeight * 0.36);
+            ctx.lineTo(currWidth * 0.288, currHeight * 0.46);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.4825);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.5625);
+            ctx.lineTo(currWidth * 0.336, currHeight * 0.5175);
+            ctx.lineTo(currWidth * 0.35, currHeight * 0.2825);
+            ctx.closePath();
+            ctx.fill();
+
+            // Högersidan av 3, Mitten del
+            ctx.beginPath();
+            ctx.moveTo(currWidth * 0.355, currHeight * 0.20);
+            ctx.lineTo(currWidth * 0.355, currHeight * 0.20);
+            ctx.lineTo(currWidth * 0.30, currHeight * 0.20);
+            ctx.lineTo(currWidth * 0.30, currHeight * 0.2825);
+            ctx.lineTo(currWidth * 0.350, currHeight * 0.2825);
+
+            ctx.closePath();
+            ctx.fill();
+
+            // Högersidan av 3, Övre del
+            ctx.fillStyle = "#FFFFFF";
+            ctx.beginPath();
+            ctx.moveTo(currWidth * 0.231, currHeight * 0.1275);
+            ctx.lineTo(currWidth * 0.231, currHeight * 0.205);
+            ctx.lineTo(currWidth * 0.355, currHeight * 0.205);
+            ctx.lineTo(currWidth * 0.36, currHeight * 0.1275);
+            ctx.closePath();
+            ctx.fill();
+
+        }
+
+        /* function jsLogo() {
+             let ctx = document.querySelector(".js").getContext("2d");
+             ctx.canvas.height = ctx.canvas.width * 0.666;
+             currHeight = ctx.canvas.height;
+             currWidth = ctx.canvas.width;
+             currX = ctx.canvas.getBoundingClientRect().x
+             currY = ctx.canvas.getBoundingClientRect().y
+             console.log(currWidth)
+             console.log(currHeight)
+
+             ctx.restore(); // Hämtar tillbaka senaste "Default state" av canvas-elementet
+             ctx.save(); // Sparar "Default State"
+             ctx.clearRect(currX, currY, currWidth, currHeight);
+             ctx.translate(0, currHeight * 0.2);
+
+             // Blå Bakgrund
+             ctx.fillStyle = "#0277BD";
+             ctx.beginPath();
+             ctx.moveTo(currWidth * 0.065, currHeight * 0.625);
+             ctx.lineTo(currWidth * 0.028, 0);
+             ctx.lineTo(currWidth * 0.43, 0);
+             ctx.lineTo(currWidth * 0.398, currHeight * 0.625);
+             ctx.lineTo(currWidth * 0.231, currHeight * 0.695);
+             ctx.closePath();
+             ctx.fill();
+
+             // Högersidan av Bakgrund, ljusare blå
+             ctx.fillStyle = "#039BE5";
+             ctx.beginPath();
+             ctx.moveTo(currWidth * 0.231, currHeight * 0.6425);
+             ctx.lineTo(currWidth * 0.366, currHeight * 0.585);
+             ctx.lineTo(currWidth * 0.398, currHeight * 0.05);
+             ctx.lineTo(currWidth * 0.231, currHeight * 0.05);
+             ctx.closePath();
+             ctx.fill();
+
+             // Vänstersidan av 5, Övre del
+             ctx.fillStyle = "#EBEBEB";
+             ctx.beginPath();
+             ctx.moveTo(currWidth * 0.231, currHeight * 0.2825);
+             ctx.lineTo(currWidth * 0.163, currHeight * 0.2825);
+             ctx.lineTo(currWidth * 0.16, currHeight * 0.205);
+             ctx.lineTo(currWidth * 0.231, currHeight * 0.205);
+             ctx.lineTo(currWidth * 0.231, currHeight * 0.1275);
+             ctx.lineTo(currWidth * 0.103, currHeight * 0.1275);
+             ctx.lineTo(currWidth * 0.116, currHeight * 0.36);
+             ctx.lineTo(currWidth * 0.231, currHeight * 0.36);
+             ctx.closePath();
+             ctx.fill();
+
+
+             // Vänstersidan av 5, Nedre del
+             ctx.beginPath();
+             ctx.moveTo(currWidth * 0.231, currHeight * 0.4825);
+             ctx.lineTo(currWidth * 0.175, currHeight * 0.46);
+             ctx.lineTo(currWidth * 0.171, currHeight * 0.3975);
+             ctx.lineTo(currWidth * 0.12, currHeight * 0.3975);
+             ctx.lineTo(currWidth * 0.126, currHeight * 0.52);
+             ctx.lineTo(currWidth * 0.231, currHeight * 0.5625);
+             ctx.closePath();
+             ctx.fill();
+
+             // Högersidan av 5, Nedre del
+             ctx.fillStyle = "#FFFFFF";
+             ctx.beginPath();
+             ctx.moveTo(currWidth * 0.231, currHeight * 0.2825);
+             ctx.lineTo(currWidth * 0.231, currHeight * 0.36);
+             ctx.lineTo(currWidth * 0.295, currHeight * 0.36);
+             ctx.lineTo(currWidth * 0.288, currHeight * 0.46);
+             ctx.lineTo(currWidth * 0.231, currHeight * 0.4825);
+             ctx.lineTo(currWidth * 0.231, currHeight * 0.5625);
+             ctx.lineTo(currWidth * 0.336, currHeight * 0.5175);
+             ctx.lineTo(currWidth * 0.35, currHeight * 0.2825);
+             ctx.closePath();
+             ctx.fill();
+
+             // Högersidan av 5, Övre del
+             ctx.fillStyle = "#FFFFFF";
+             ctx.beginPath();
+             ctx.moveTo(currWidth * 0.231, currHeight * 0.1275);
+             ctx.lineTo(currWidth * 0.231, currHeight * 0.205);
+             ctx.lineTo(currWidth * 0.355, currHeight * 0.205);
+             ctx.lineTo(currWidth * 0.36, currHeight * 0.1275);
+             ctx.closePath();
+             ctx.fill();
+
+         }
+         */
+    </script>
+</body>
+
+</html>
