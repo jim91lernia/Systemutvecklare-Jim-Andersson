@@ -1,0 +1,106 @@
+/* Här fixar jag mina egna stilar */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom, #fca49b 0%, #ee7d70 500%);
+
+}
+
+ul,
+li {
+    list-style: none;
+    text-align: center;
+    top: 100%;
+
+}
+
+
+.container {
+    width: 35%;
+    margin: 10px auto;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.animate-warning {
+    animation: blink-warning 1s forwards;
+}
+
+
+@keyframes blink-warning {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 100%;
+    }
+
+    40% {
+        opacity: 0%;
+    }
+
+    60% {
+        opacity: 100%;
+    }
+
+    80% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+
+    }
+
+}
+
+.title,
+.completed {
+    text-align: center;
+}
+
+.item {
+    margin-top: 10px;
+}
+
+.warning {
+    color: red;
+    font-style: italic;
+    text-align: center;
+    opacity: 0;
+}
+
+
+.item-list {
+    font-weight: 600;
+    color: #000;
+    transition: color 1s linear;
+
+}
+
+.item-list:hover {
+    text-decoration: line-through;
+}
+
+div .item-finished {
+    text-decoration: line-through;
+    color: gray;
+    transition: color 0.3s linear;
+}
+
+#deleteButton {}
