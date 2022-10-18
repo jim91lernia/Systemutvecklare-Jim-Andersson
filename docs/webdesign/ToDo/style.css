@@ -72,7 +72,7 @@ li {
 
 .animate-fade-in-top {
 
-    animation: fade-in-top 1s cubic-bezier(.17, .67, .83, .67);
+    animation: fade-in-top 0.5s cubic-bezier(.17, .67, .83, .67);
 }
 
 @keyframes fade-in-top {
@@ -109,6 +109,26 @@ li {
 }
 
 
+.animate-fade-in-item {
+    animation: fade-in-item 1s linear;
+}
+
+@keyframes fade-in-item {
+    0% {
+        opacity: 0;
+        margin-top: 20px;
+    }
+
+    20% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+
+    100% {
+        margin-top: 0px;
+    }
+}
+
 .title,
 .completed {
     text-align: center;
@@ -137,7 +157,7 @@ li {
 
 }
 
-.item-list:hover {
+.item-list>p:hover {
     text-decoration: line-through;
 }
 
@@ -147,4 +167,6 @@ div .item-finished {
     transition: color 0.3s linear;
 }
 
-#deleteButton {}
+#deleteButton {
+    display: inline;
+}

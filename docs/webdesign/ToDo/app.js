@@ -48,7 +48,7 @@ function addChild(item) {
   let li = document.createElement("li")
   let isChecked = false
   li.innerHTML = `
-        <div class="item item-list">
+        <div class="item item-list animate-fade-in-item">
           <p>${item}</p>
           <button id="deleteButton" name="delete">Ta bort</button>
         </div>
