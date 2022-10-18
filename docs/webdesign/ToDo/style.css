@@ -10,25 +10,41 @@
 
 body {
     height: 100vh;
-    background: linear-gradient(to bottom, #fca49b 0%, #ee7d70 1000%);
+    background: linear-gradient(to bottom, #f8b2cd 0%, #fc8a7e 500%);
 
 }
+
+h1 {
+    font-size: 40px;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.item-input {
+    text-align: center;
+    height: 60px;
+
+}
+
 
 ul,
 li {
     list-style: none;
     text-align: center;
-    top: 100%;
+
 
 }
 
 
 .container {
-    width: 35%;
+    width: 30%;
     margin: 10px auto;
     background-color: #fff;
     padding: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,7 +126,7 @@ li {
 
 
 .animate-fade-in-item {
-    animation: fade-in-item 1s linear;
+    animation: fade-in-item 2s linear;
 }
 
 @keyframes fade-in-item {
@@ -139,7 +155,8 @@ li {
 }
 
 .item {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 .warning {
@@ -151,10 +168,16 @@ li {
 
 
 .item-list {
+    display: inline-block;
     font-weight: 600;
     color: #000;
     transition: color 1s linear;
 
+}
+
+.item-list>p {
+    float: left;
+    margin-right: 20px;
 }
 
 .item-list>p:hover {
@@ -167,6 +190,20 @@ div .item-finished {
     transition: color 0.3s linear;
 }
 
+
 #deleteButton {
-    display: inline;
+    background: url(./trash.svg) no-repeat;
+    border-style: none;
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+}
+
+#ToDo {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
 }

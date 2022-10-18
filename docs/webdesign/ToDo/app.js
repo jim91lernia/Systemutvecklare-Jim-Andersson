@@ -50,8 +50,9 @@ function addChild(item) {
   li.innerHTML = `
         <div class="item item-list animate-fade-in-item">
           <p>${item}</p>
-          <button id="deleteButton" name="delete">Ta bort</button>
+          <button id="deleteButton" name="delete"></button>
         </div>
+
  
     `
   list.appendChild(li)
